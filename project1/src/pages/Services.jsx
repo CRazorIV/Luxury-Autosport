@@ -1,14 +1,14 @@
 const Services = () => {
     return (
         <div className="page-container">
-            <h1>Onze Diensten</h1>
-            <p>Wij bieden hoogwaardige services aan voor jouw auto.</p>
+            <h1>Our Services</h1>
+            <p>We offer premium services for your luxury vehicle.</p>
 
             <ul className="service-list">
-                <li>✔ Onderhoud & Reparatie</li>
-                <li>✔ Auto Leasing</li>
-                <li>✔ Financiering & Verzekering</li>
-                <li>✔ Tweedehands verkoop</li>
+                <li>✔ Maintenance & Repair</li>
+                <li>✔ Vehicle Leasing</li>
+                <li>✔ Financing & Insurance</li>
+                <li>✔ Pre-owned Sales</li>
             </ul>
         </div>
     );

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css"; // Voeg een CSS-bestand toe voor styling
+import "./Navbar.css";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <Link to="/">AutoDealer</Link>
+                <Link to="/">Luxury Autos</Link>
             </div>
 
             <div className={`menu ${menuOpen ? "open" : ""}`}>
@@ -18,10 +18,10 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li className={location.pathname === "/inventory" ? "active" : ""}>
-                        <Link to="/inventory">Voorraad</Link>
+                        <Link to="/inventory">Inventory</Link>
                     </li>
                     <li className={location.pathname === "/services" ? "active" : ""}>
-                        <Link to="/services">Diensten</Link>
+                        <Link to="/services">Services</Link>
                     </li>
                     <li className={location.pathname === "/contact" ? "active" : ""}>
                         <Link to="/contact">Contact</Link>

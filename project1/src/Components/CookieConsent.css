@@ -1,0 +1,121 @@
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(15, 15, 15, 0.95);
+    color: #fff;
+    z-index: 9999;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #ff0000;
+    animation: slideUp 0.5s ease forwards;
+    font-family: 'Play', 'Rajdhani', sans-serif;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cookie-icon {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-text h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.cookie-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cookie-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cookie-button.accept {
+    background-color: #ff0000;
+    color: white;
+}
+
+.cookie-button.accept:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.cookie-button.decline {
+    background-color: transparent;
+    color: #cccccc;
+    border: 1px solid #333;
+}
+
+.cookie-button.decline:hover {
+    color: #ffffff;
+    border-color: #666;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .cookie-text {
+        margin-bottom: 15px;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+    }
+
+    .cookie-button {
+        flex: 1;
+        text-align: center;
+        padding: 10px 0;
+    }
+}

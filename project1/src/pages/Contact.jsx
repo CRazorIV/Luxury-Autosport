@@ -2,18 +2,18 @@ const Contact = () => {
     return (
         <div className="page-container">
             <h1>Contact</h1>
-            <p>Neem contact met ons op via onderstaand formulier of bel ons.</p>
+            <p>Reach out to us using the form below or call us directly.</p>
             <form className="contact-form">
-                <label>Naam:</label>
-                <input type="text" placeholder="Jouw naam" />
+                <label>Name:</label>
+                <input type="text" placeholder="Your name" />
 
                 <label>Email:</label>
-                <input type="email" placeholder="Jouw e-mail" />
+                <input type="email" placeholder="Your email" />
 
-                <label>Bericht:</label>
-                <textarea placeholder="Typ je bericht hier..."></textarea>
+                <label>Message:</label>
+                <textarea placeholder="Type your message here..."></textarea>
 
-                <button type="submit">Verzenden</button>
+                <button type="submit">Send</button>
             </form>
         </div>
     );

@@ -12,8 +12,8 @@ const Inventory = () => {
 
     return (
         <div className="page-container">
-            <h1>Onze Auto Voorraad</h1>
-            <p>Bekijk onze nieuwste auto's en selecteer je droomauto.</p>
+            <h1>Our Vehicle Collection</h1>
+            <p>Browse our latest luxury vehicles and find your dream car.</p>
 
             <div className="car-list">
                 {cars.map(car => (
@@ -34,7 +34,7 @@ const Inventory = () => {
                             <h2>{car.name}</h2>
                             <p>{car.year} | {car.kilometers} | {car.fuel}</p>
                             <p className="car-price">{car.price}</p>
-                            <button>Meer info</button>
+                            <button>More Info</button>
                         </div>
                     </div>
                 ))}

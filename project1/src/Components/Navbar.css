@@ -1,25 +1,31 @@
 /* Algemene styling */
 .navbar {
+    background-color: #000000;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #222;
-    padding: 15px 20px;
-    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo a {
-    color: white;
+    color: #ff0000;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.8rem;
     font-weight: bold;
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .menu ul {
-    list-style: none;
     display: flex;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .menu li {
@@ -27,21 +33,40 @@
 }
 
 .menu a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #f39c12;
+    color: #ff0000;
 }
 
-/* Actieve link */
-.active a {
-    color: #f39c12;
-    font-weight: bold;
-    border-bottom: 2px solid #f39c12;
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff0000;
+    transition: width 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu li.active a {
+    color: #ff0000;
+}
+
+.menu li.active a::after {
+    width: 100%;
 }
 
 /* Hamburger menu */
@@ -49,34 +74,36 @@
     display: none;
     background: none;
     border: none;
-    color: white;
-    font-size: 24px;
+    font-size: 1.8rem;
+    color: #ffffff;
     cursor: pointer;
 }
 
 /* Responsive menu */
 @media (max-width: 768px) {
     .menu {
-        position: absolute;
+        position: fixed;
         top: 60px;
-        right: 0;
-        background: #222;
-        width: 200px;
-        display: none;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 60px);
+        background-color: #000000;
         flex-direction: column;
-        padding: 10px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
 
     .menu.open {
-        display: flex;
+        right: 0;
     }
 
     .menu ul {
         flex-direction: column;
+        padding: 20px;
     }
 
     .menu li {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 
     .hamburger {

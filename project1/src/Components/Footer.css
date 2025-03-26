@@ -1,0 +1,240 @@
+.footer {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    border-top: 3px solid #ff0000;
+    padding-top: 40px;
+    font-family: 'Play', 'Rajdhani', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #ff0000;
+}
+
+.footer-section.about p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ff0000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: #ff0000;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links li {
+    margin-bottom: 12px;
+}
+
+.footer-section.links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-section.links a::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.footer-section.links a:hover {
+    color: #ff0000;
+    padding-left: 18px;
+}
+
+.footer-section.subscribe p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-section.subscribe form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-section.subscribe input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.footer-section.subscribe input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.3);
+}
+
+.footer-section.subscribe button {
+    padding: 12px 22px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.footer-section.subscribe button:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.subscribe-success {
+    padding: 15px;
+    background-color: rgba(0, 128, 0, 0.2);
+    border-left: 3px solid green;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 15px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff0000;
+}
+
+.portfolio-link {
+    position: relative;
+    opacity: 0.7;
+}
+
+.portfolio-link .highlight {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.portfolio-link:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
