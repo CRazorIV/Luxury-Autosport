@@ -74,24 +74,42 @@ const Home = () => {
                 <div className="corner-accent bottom-right"></div>
             </section>
 
-            {/* Features Section */}
+            {/* Features Section with Arrow Links */}
             <section className="features" ref={featuresRef}>
                 <h2>The Luxury Autos Difference</h2>
                 <div className="features-grid">
                     <div className="feature">
-                        <div className="feature-icon">🏆</div>
+                        <div className="feature-icon">
+                            <i className="fas fa-gem"></i>
+                        </div>
                         <h3>Curated Selection</h3>
                         <p>Hand-selected premium vehicles from the world's finest manufacturers</p>
+                        <Link to="/inventory" className="feature-link">
+                            <span>Explore Our Collection</span>
+                            <i className="fas fa-arrow-right"></i>
+                        </Link>
                     </div>
                     <div className="feature">
-                        <div className="feature-icon">🔍</div>
+                        <div className="feature-icon">
+                            <i className="fas fa-shield-alt"></i>
+                        </div>
                         <h3>Certified Authentication</h3>
                         <p>Every vehicle undergoes a rigorous 150-point inspection process</p>
+                        <Link to="/services" className="feature-link">
+                            <span>Learn About Our Process</span>
+                            <i className="fas fa-arrow-right"></i>
+                        </Link>
                     </div>
                     <div className="feature">
-                        <div className="feature-icon">🤝</div>
+                        <div className="feature-icon">
+                            <i className="fas fa-concierge-bell"></i>
+                        </div>
                         <h3>White Glove Service</h3>
                         <p>Personalized concierge experience from test drive to delivery</p>
+                        <Link to="/services" className="feature-link">
+                            <span>Discover Our Services</span>
+                            <i className="fas fa-arrow-right"></i>
+                        </Link>
                     </div>
                 </div>
             </section>

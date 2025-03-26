@@ -110,3 +110,58 @@
         display: block;
     }
 }
+
+/* Improved responsive navbar */
+@media (max-width: 992px) {
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .logo a {
+        font-size: 1.6rem;
+    }
+
+    .menu li {
+        margin: 0 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .menu {
+        top: 57px;
+        /* Adjust based on navbar height */
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .menu a {
+        font-size: 1.1rem;
+        padding: 10px 0;
+    }
+
+    .menu li {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    .menu {
+        width: 85%;
+        top: 53px;
+        /* Adjust based on navbar height */
+    }
+}

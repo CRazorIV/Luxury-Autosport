@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './CookieConsent.css';
 
 const CookieConsent = () => {
     const [visible, setVisible] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
         // Check if user has already consented
@@ -26,6 +28,10 @@ const CookieConsent = () => {
         setVisible(false);
     };
 
+    const toggleDetails = () => {
+        setExpanded(!expanded);
+    };
+
     if (!visible) return null;
 
     return (
@@ -39,8 +45,36 @@ const CookieConsent = () => {
                     <p>
                         Luxury Autos uses cookies to enhance your browsing experience, personalize content and ads,
                         analyze our traffic, and remember your preferences. By clicking "Accept All", you consent
-                        to our use of cookies as described in our Cookie Policy.
+                        to our use of cookies as described in our <Link to="/privacy-policy" className="policy-link">Privacy Policy</Link>.
                     </p>
+
+                    {expanded && (
+                        <div className="cookie-details">
+                            <h4>How We Use Cookies</h4>
+                            <p>
+                                We use different types of cookies for various purposes:
+                            </p>
+                            <ul>
+                                <li><strong>Essential cookies:</strong> Required for basic website functionality</li>
+                                <li><strong>Analytical cookies:</strong> Help us understand how users interact with our website</li>
+                                <li><strong>Advertising cookies:</strong> Used to deliver relevant ads to you</li>
+                            </ul>
+                            <div className="policy-links">
+                                <p>For more information, please review:</p>
+                                <div className="policy-links-container">
+                                    <Link to="/privacy-policy" className="policy-link">
+                                        <i className="fas fa-shield-alt"></i> Privacy Policy
+                                    </Link>
+                                    <Link to="/terms-of-service" className="policy-link">
+                                        <i className="fas fa-file-contract"></i> Terms of Service
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    <button className="cookie-button details" onClick={toggleDetails}>
+                        {expanded ? 'Hide Details' : 'Show Details'}
+                    </button>
                 </div>
                 <div className="cookie-buttons">
                     <button className="cookie-button decline" onClick={declineCookies}>

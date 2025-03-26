@@ -72,8 +72,8 @@ const Footer = () => {
                 <div className="footer-bottom-content">
                     <p>&copy; {new Date().getFullYear()} Luxury Autos. All Rights Reserved.</p>
                     <div className="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/terms-of-service">Terms of Service</Link>
                         <a href="https://crazoriv.github.io/" target="_blank" rel="noopener noreferrer" className="portfolio-link">Website by <span className="highlight">Yuri Kuvalja</span></a>
                     </div>
                 </div>

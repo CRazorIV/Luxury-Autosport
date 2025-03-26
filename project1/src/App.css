@@ -318,10 +318,63 @@ h1::after {
   }
 }
 
-/* Add this to your existing App.css */
+/* Add to your existing App.css */
+
+/* Improved vertical spacing */
 main {
-  min-height: 70vh;
-  /* Ensures enough space for the content */
-  padding-bottom: 40px;
-  /* Adds space between content and footer */
+  min-height: calc(100vh - 80px - 350px);
+  /* Navbar height + footer height estimate */
+  padding-bottom: 60px;
+  /* Increased space between content and footer */
+}
+
+/* Page-specific minimum heights */
+.contact-page-container,
+.terms-page-container,
+.privacy-page-container {
+  min-height: calc(100vh - 80px - 350px - 60px);
+  /* account for main padding-bottom */
+  padding: 60px 20px 80px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .page-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    min-height: calc(100vh - 80px - 450px);
+    /* Taller footer on tablet */
+  }
+
+  .page-container {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 60px - 550px);
+    /* Taller footer on mobile */
+  }
+
+  .page-container {
+    padding: 30px 15px;
+  }
+
+  /* Contact page specific spacing */
+  .contact-page-container {
+    min-height: calc(100vh - 60px - 550px - 60px);
+    padding: 40px 15px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
