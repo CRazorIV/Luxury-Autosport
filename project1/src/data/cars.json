@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "BMW X5",
+        "year": "2022",
+        "kilometers": "30.000 km",
+        "fuel": "Benzine",
+        "price": "€58.900",
+        "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    {
+        "id": 2,
+        "name": "Audi A6",
+        "year": "2021",
+        "kilometers": "40.000 km",
+        "fuel": "Diesel",
+        "price": "€42.500",
+        "image": "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    },
+    {
+        "id": 3,
+        "name": "Mercedes C-Class",
+        "year": "2023",
+        "kilometers": "15.000 km",
+        "fuel": "Hybrid",
+        "price": "€55.300",
+        "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    },
+    {
+        "id": 4,
+        "name": "Tesla Model 3",
+        "year": "2022",
+        "kilometers": "25.000 km",
+        "fuel": "Elektrisch",
+        "price": "€49.900",
+        "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
+    },
+    {
+        "id": 5,
+        "name": "Audi R8",
+        "year": "2023",
+        "kilometers": "5.000 km",
+        "fuel": "Benzine",
+        "price": "€195.000",
+        "image": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+    },
+    {
+        "id": 6,
+        "name": "Mercedes G-Wagon",
+        "year": "2023",
+        "kilometers": "10.000 km",
+        "fuel": "Diesel",
+        "price": "€178.500",
+        "image": "https://images.unsplash.com/photo-1520031441872-265e4ff70366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    }
+]

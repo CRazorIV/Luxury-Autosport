@@ -1,19 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css"; // Voeg een CSS-bestand toe voor styling
 
 const Navbar = () => {
-    // script komt hier.
-    // view is hieronder. 
+    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+
     return (
-        <>
-            <nav>
-                <h1>Dit is de navbar</h1>
+        <nav className="navbar">
+            <div className="logo">
+                <Link to="/">AutoDealer</Link>
+            </div>
+
+            <div className={`menu ${menuOpen ? "open" : ""}`}>
                 <ul>
-                    <li><Link to='/' />Ghome....</li>
-                    <li><Link to='/About' />Ghome....</li>
+                    <li className={location.pathname === "/" ? "active" : ""}>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li className={location.pathname === "/inventory" ? "active" : ""}>
+                        <Link to="/inventory">Voorraad</Link>
+                    </li>
+                    <li className={location.pathname === "/services" ? "active" : ""}>
+                        <Link to="/services">Diensten</Link>
+                    </li>
+                    <li className={location.pathname === "/contact" ? "active" : ""}>
+                        <Link to="/contact">Contact</Link>
+                    </li>
                 </ul>
-            </nav>
-        </>
+            </div>
+
+            <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </button>
+        </nav>
     );
 };
 
