@@ -1,0 +1,318 @@
+.page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-container h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.page-container > p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;  /* Changed from #666 to white */
+}
+
+/* Car list grid layout */
+.car-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
+  /* Center the cards in the available space */
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* On wider screens, use multiple columns */
+@media (min-width: 768px) {
+  .car-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .car-list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+
+/* Car card styling */
+.car-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-image-container {
+  height: 220px;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.car-image:hover {
+  transform: scale(1.05);
+}
+
+.car-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-details h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.car-details p {
+  margin: 5px 0;
+  color: #ffffff;  /* Changed from #555 to white */
+  font-size: 0.9rem;
+}
+
+.car-price {
+  font-weight: bold;
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  margin-top: 10px !important;
+}
+
+.car-details button {
+  margin-top: auto;
+  padding: 10px 15px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: 15px;
+  width: 100%; /* Full width button on mobile */
+}
+
+.car-details button:hover {
+  background-color: #2c387e;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .car-image-container {
+    height: 200px;
+  }
+  
+  .car-details h2 {
+    font-size: 1.3rem;
+  }
+  
+  .page-container {
+    padding: 15px;
+  }
+  
+  .car-list {
+    gap: 25px;
+  }
+}
+
+@media (min-width: 481px) {
+  .car-details button {
+    width: auto; /* Return to normal width on larger screens */
+  }
+}
+
+/* Override App.css car list styles */
+.page-container .car-list {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 30px !important;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap !important;
+}
+
+/* Override App.css car card styles for proper mobile display */
+.page-container .car-card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #181818;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-container .car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3);
+  border-color: #ff0000;
+}
+
+.page-container .car-image-container {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.page-container .car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.page-container .car-card:hover .car-image {
+  transform: scale(1.08);
+}
+
+.page-container .car-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.page-container .car-details h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.page-container .car-details p {
+  margin: 5px 0;
+  color: #ffffff; /* Changed from #e0e0e0 to pure white */
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+.page-container .car-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ff0000;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.page-container .car-card button {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s;
+  font-weight: 600;
+  width: 100%;
+  max-width: 200px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: center;
+  display: block;
+}
+
+.page-container .car-card button:hover {
+  background: #cc0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* On wider screens, use multiple columns */
+@media (min-width: 768px) {
+  .page-container .car-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 100%;
+  }
+  
+  .page-container .car-card button {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container .car-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Make absolutely sure we have only ONE column on small screens */
+@media (max-width: 767px) {
+  .page-container .car-list {
+    grid-template-columns: 1fr !important;
+    max-width: 500px !important;
+    display: grid !important;
+    flex-direction: column !important;
+  }
+  
+  .page-container .car-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .page-container .car-image-container {
+    height: 200px;
+  }
+  
+  .page-container .car-details h2 {
+    font-size: 1.3rem;
+  }
+  
+  .page-container {
+    padding: 15px;
+  }
+  
+  .page-container .car-list {
+    gap: 25px;
+  }
+}

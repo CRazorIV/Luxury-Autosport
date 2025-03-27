@@ -31,13 +31,6 @@ const Home = () => {
                     <div className="overlay"></div>
                 </div>
 
-                {/* Animated brand logo */}
-                <div className={`hero-brand ${isVisible ? 'visible' : ''}`}>
-                    <div className="brand-icon">
-                        <i className="fas fa-car"></i>
-                    </div>
-                </div>
-
                 <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
                     <h1>
                         <span className="title-luxury">Luxury</span>

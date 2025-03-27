@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import carsData from '../data/cars.json';
+import './Inventory.css'; // Make sure to create this CSS file
 
 const Inventory = () => {
     // car data from the imported JSON file
