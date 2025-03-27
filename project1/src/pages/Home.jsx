@@ -21,17 +21,17 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            {/* Enhanced Hero Section with Video Background */}
-            <section className="hero">
+            {/* Hero Section with header styled like Services page */}
+            <div className="home-hero">
                 <div className="video-background">
-                    <video autoPlay muted loop>
-                        <source src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47b5e33cd8c592e&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
+                    <video autoPlay muted loop playsInline>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-driving-through-a-city-at-night-12825-large.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <div className="overlay"></div>
                 </div>
 
-                <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
+                <div className="home-hero-content">
                     <h1>
                         <span className="title-luxury">Luxury</span>
                         <span className="title-autos">Autos</span>
@@ -59,13 +59,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Animated corner accents */}
-                <div className="corner-accent top-left"></div>
-                <div className="corner-accent top-right"></div>
-                <div className="corner-accent bottom-left"></div>
-                <div className="corner-accent bottom-right"></div>
-            </section>
+            </div>
 
             {/* Features Section with Arrow Links */}
             <section className="features" ref={featuresRef}>
