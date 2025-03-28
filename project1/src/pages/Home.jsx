@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import heroVideo from '../assets/heroheadervideo.mp4';
 import './Home.css';
 
 const Home = () => {
     const featuresRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const [setIsVisible] = useState(false);
 
     useEffect(() => {
         // Trigger animation after a short delay
@@ -25,7 +26,7 @@ const Home = () => {
             <div className="home-hero">
                 <div className="video-background">
                     <video autoPlay muted loop playsInline>
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-driving-through-a-city-at-night-12825-large.mp4" type="video/mp4" />
+                        <source src={heroVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <div className="overlay"></div>
