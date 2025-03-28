@@ -1,2 +1,3 @@
-# interface2_react
-Interface2_react tasks
+# Luxury Autosport
+
+A school project made with the React JavaScript library and Node.js backend.
