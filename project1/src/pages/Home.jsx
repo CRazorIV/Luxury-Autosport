@@ -5,7 +5,42 @@ import './Home.css';
 
 const Home = () => {
     const featuresRef = useRef(null);
-    const [setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    
+    // Featured vehicles data
+    const featuredVehicles = [
+        {
+            id: 1,
+            name: "Porsche 911 Turbo S",
+            specs: "640 HP | 0-60 in 2.6s",
+            image: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 2,
+            name: "Ferrari 488 GTB",
+            specs: "661 HP | 0-60 in 3.0s",
+            image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 3,
+            name: "Lamborghini Huracán",
+            specs: "631 HP | 0-60 in 2.9s",
+            image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 4,
+            name: "Aston Martin DBS",
+            specs: "715 HP | 0-60 in 3.2s",
+            image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 5,
+            name: "McLaren 720S",
+            specs: "710 HP | 0-60 in 2.8s",
+            image: "https://images.unsplash.com/photo-1617808654153-9b63c69bf6f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        }
+    ];
 
     useEffect(() => {
         // Trigger animation after a short delay
@@ -13,11 +48,37 @@ const Home = () => {
             setIsVisible(true);
         }, 500);
 
-        return () => clearTimeout(timer);
-    }, []);
+        // Automatic carousel rotation
+        const slideInterval = setInterval(() => {
+            setCurrentSlide(prevSlide => 
+                prevSlide === featuredVehicles.length - 1 ? 0 : prevSlide + 1
+            );
+        }, 5000);
+
+        return () => {
+            clearTimeout(timer);
+            clearInterval(slideInterval);
+        };
+    }, [featuredVehicles.length]);
 
     const scrollToFeatures = () => {
         featuresRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const nextSlide = () => {
+        setCurrentSlide(prevSlide => 
+            prevSlide === featuredVehicles.length - 1 ? 0 : prevSlide + 1
+        );
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide(prevSlide => 
+            prevSlide === 0 ? featuredVehicles.length - 1 : prevSlide - 1
+        );
+    };
+
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
     };
 
     return (
@@ -56,6 +117,15 @@ const Home = () => {
                     <div className="scroll-down-button">
                         <span>Discover</span>
                         <div className="scroll-icon">
+                            <i className="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="discover-more-container" onClick={scrollToFeatures}>
+                    <div className="discover-more-button">
+                        <div className="double-arrow">
+                            <i className="fas fa-chevron-down"></i>
                             <i className="fas fa-chevron-down"></i>
                         </div>
                     </div>
@@ -102,32 +172,45 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Featured Inventory Section */}
+            {/* Featured Vehicles Carousel */}
             <section className="page-preview inventory-preview">
                 <h2>Featured Vehicles</h2>
                 <p className="section-subtitle">Explore our handpicked selection of exceptional automobiles</p>
 
-                <div className="preview-grid">
-                    <div className="car-preview">
-                        <div className="car-preview-image">
-                            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Porsche 911" />
-                        </div>
-                        <h3>Porsche 911 Turbo S</h3>
-                        <p>640 HP | 0-60 in 2.6s</p>
+                <div className="carousel-container">
+                    <div className="carousel-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                        {featuredVehicles.map((vehicle, index) => (
+                            <div className="carousel-slide" key={vehicle.id}>
+                                <div className="carousel-image">
+                                    <img src={vehicle.image} alt={vehicle.name} />
+                                </div>
+                                <div className="carousel-content">
+                                    <h3>{vehicle.name}</h3>
+                                    <p>{vehicle.specs}</p>
+                                    <Link to="/inventory" className="view-details-btn">
+                                        View Details <i className="fas fa-arrow-right"></i>
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="car-preview">
-                        <div className="car-preview-image">
-                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ferrari" />
-                        </div>
-                        <h3>Ferrari 488 GTB</h3>
-                        <p>661 HP | 0-60 in 3.0s</p>
-                    </div>
-                    <div className="car-preview">
-                        <div className="car-preview-image">
-                            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lamborghini" />
-                        </div>
-                        <h3>Lamborghini Huracán</h3>
-                        <p>631 HP | 0-60 in 2.9s</p>
+
+                    <button className="carousel-control prev" onClick={prevSlide}>
+                        <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button className="carousel-control next" onClick={nextSlide}>
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div className="carousel-indicators">
+                        {featuredVehicles.map((_, index) => (
+                            <button 
+                                key={index} 
+                                className={`carousel-indicator ${index === currentSlide ? 'active' : ''}`}
+                                onClick={() => goToSlide(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
 

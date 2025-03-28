@@ -1500,6 +1500,192 @@
     animation: bounce 2s infinite;
 }
 
+/* Discover More Button with Double Arrows */
+.discover-more-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+    animation: pulse 2s infinite alternate;
+}
+
+.discover-more-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.discover-more-button span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.double-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.6;
+}
+
+.double-arrow i {
+    color: #ff0000;
+    font-size: 1.1rem;
+    animation: arrowBounce 1.5s infinite;
+}
+
+.double-arrow i:last-child {
+    animation-delay: 0.2s;
+    margin-top: -2px;
+}
+
+.discover-more-button:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    transform: translateY(3px);
+}
+
+@keyframes arrowBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(5px);
+    }
+    60% {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+}
+
+/* Responsive styling for Discover More button */
+@media (max-width: 768px) {
+    .discover-more-container {
+        bottom: 30px;
+    }
+    
+    .discover-more-button {
+        padding: 10px 25px;
+    }
+    
+    .discover-more-button span {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .double-arrow i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover-more-container {
+        bottom: 25px;
+    }
+    
+    .discover-more-button {
+        padding: 8px 20px;
+    }
+    
+    .discover-more-button span {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .double-arrow i {
+        font-size: 0.9rem;
+    }
+}
+
+/* Update Discover More Button with Double Arrows - minimal version */
+.discover-more-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.discover-more-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 0; /* Removed padding */
+    background: none; /* Removed background */
+    border: none; /* Removed border */
+}
+
+.discover-more-button span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.double-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.4; /* Tighter spacing between arrows */
+}
+
+.double-arrow i {
+    color: #ff0000;
+    font-size: 1.2rem;
+    animation: arrowBounce 1.5s infinite;
+    opacity: 0.8;
+}
+
+.double-arrow i:last-child {
+    animation-delay: 0.2s;
+    margin-top: -3px; /* Closer to first arrow */
+}
+
+.discover-more-button:hover .double-arrow i {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.discover-more-button:hover span {
+    opacity: 0.9;
+}
+
+/* Hide discover-more-container on mobile devices */
+@media (max-width: 768px) {
+    .discover-more-container {
+        display: none;
+    }
+    
+    /* Adjust position of scroll-down-container to be centered when discover-more is hidden */
+    .scroll-down-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1800px) {
     .home-hero h1 {
@@ -1719,5 +1905,447 @@
     .home-hero .video-background video {
         width: 100%;
         height: auto;
+    }
+}
+
+/* Featured Vehicle Carousel Styling */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: #111111;
+    border: 1px solid #333;
+    height: 550px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+    height: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.carousel-image {
+    flex: 1;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.carousel-slide:hover .carousel-image img {
+    transform: scale(1.05);
+}
+
+.carousel-content {
+    background-color: #111111;
+    padding: 25px 30px;
+    color: white;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #333;
+    position: relative;
+}
+
+.carousel-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background-color: #ff0000;
+    transition: height 0.6s ease;
+}
+
+.carousel-slide:hover .carousel-content:before {
+    height: 100%;
+}
+
+.carousel-content h3 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.carousel-content p {
+    color: #ff0000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.carousel-slide:hover .carousel-content h3 {
+    transform: translateX(10px);
+}
+
+.view-details-btn {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-details-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover {
+    color: #ff0000;
+}
+
+.view-details-btn:hover i {
+    transform: translateX(5px);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.carousel-control:hover {
+    background-color: #ff0000;
+    opacity: 1;
+    border-color: #ff0000;
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-indicator.active {
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments for carousel */
+@media (min-width: 1200px) {
+    .carousel-container {
+        height: 600px;
+    }
+    
+    .carousel-content {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-container {
+        height: 500px;
+    }
+    
+    .carousel-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 450px;
+    }
+    
+    .carousel-content {
+        padding: 20px 25px;
+    }
+    
+    .carousel-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 100px;
+    }
+    
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-container {
+        height: 400px;
+    }
+    
+    .carousel-content {
+        padding: 15px 20px;
+    }
+    
+    .carousel-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-content p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-indicators {
+        bottom: 80px;
+    }
+    
+    .carousel-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .carousel-control {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-control.prev {
+        left: 10px;
+    }
+    
+    .carousel-control.next {
+        right: 10px;
+    }
+}
+
+/* Updated hero section styling with better laptop responsiveness */
+.home-hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-top: -20px;
+}
+
+/* Improve laptop and tablet responsiveness */
+@media (max-width: 1800px) and (min-height: 800px) {
+    .home-hero h1 {
+        font-size: 8rem;
+    }
+    
+    .title-luxury {
+        font-size: 5rem;
+        letter-spacing: 15px;
+    }
+    
+    .title-autos {
+        font-size: 9rem;
+        letter-spacing: 18px;
+    }
+}
+
+/* Standard laptops (1366x768, 1440x900, etc.) */
+@media (max-width: 1440px), (max-height: 900px) {
+    .home-hero {
+        height: 90vh;
+        min-height: 650px;
+    }
+    
+    .home-hero h1 {
+        font-size: 6.5rem;
+    }
+    
+    .title-luxury {
+        font-size: 4.2rem;
+        letter-spacing: 10px;
+    }
+    
+    .title-autos {
+        font-size: 7.5rem;
+        letter-spacing: 12px;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+        letter-spacing: 8px;
+        margin-bottom: 40px;
+    }
+    
+    .title-separator {
+        width: 220px;
+        margin: 20px auto 30px;
+    }
+    
+    .hero-buttons .cta-button {
+        min-width: 220px;
+        padding: 18px 36px;
+    }
+    
+    .scroll-down-container,
+    .discover-more-container {
+        bottom: 30px;
+    }
+}
+
+/* Smaller laptops (13" screens) */
+@media (max-width: 1280px), (max-height: 800px) {
+    .home-hero {
+        height: 85vh;
+        min-height: 600px;
+    }
+    
+    .home-hero h1 {
+        font-size: 5.5rem;
+    }
+    
+    .title-luxury {
+        font-size: 3.8rem;
+        letter-spacing: 8px;
+    }
+    
+    .title-autos {
+        font-size: 6.5rem;
+        letter-spacing: 10px;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+        letter-spacing: 6px;
+        margin-bottom: 35px;
+    }
+    
+    .hero-buttons {
+        gap: 40px;
+        margin-top: 40px;
+    }
+    
+    .hero-buttons .cta-button {
+        min-width: 200px;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Better media query for typical 1024px tablets in landscape */
+@media (max-width: 1024px), (max-height: 768px) {
+    .home-hero {
+        height: 80vh;
+        min-height: 550px;
+    }
+    
+    .home-hero h1 {
+        font-size: 5rem;
+    }
+    
+    .title-luxury {
+        font-size: 3.2rem;
+        letter-spacing: 6px;
+    }
+    
+    .title-autos {
+        font-size: 5.8rem;
+        letter-spacing: 8px;
+        margin-top: -12px;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+    }
+    
+    .title-separator {
+        width: 180px;
+        height: 4px;
+        margin: 18px auto 25px;
+    }
+    
+    .hero-buttons .cta-button {
+        min-width: 180px;
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Keep your other existing media queries for smaller screens */
+
+/* Fix for common laptop aspect ratios */
+@media (min-aspect-ratio: 16/9) {
+    .home-hero {
+        height: 90vh;
+    }
+    
+    .home-hero .video-background video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .home-hero .video-background video {
+        width: auto;
+        height: 100%;
     }
 }
