@@ -6,7 +6,25 @@
         "kilometers": "30.000 km",
         "fuel": "Benzine",
         "price": "€58.900",
-        "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "description": "The BMW X5 combines luxury and performance in a versatile SUV package. With its powerful engine, advanced technology, and premium interior, it offers an exceptional driving experience.",
+        "engine": "3.0L TwinPower Turbo inline-6",
+        "horsepower": "335 hp",
+        "transmission": "8-speed automatic",
+        "drivetrain": "All-wheel drive",
+        "colors": [
+            "Alpine White",
+            "Carbon Black",
+            "Mineral White",
+            "Phytonic Blue"
+        ],
+        "features": [
+            "Panoramic sunroof",
+            "Live Cockpit Professional",
+            "Heated front seats",
+            "Harman Kardon surround sound",
+            "Driving Assistant Professional"
+        ]
     },
     {
         "id": 2,
@@ -14,8 +32,26 @@
         "year": "2021",
         "kilometers": "40.000 km",
         "fuel": "Diesel",
-        "price": "€42.500",
-        "image": "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+        "price": "€45.000",
+        "image": "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+        "description": "The Audi A6 is a sophisticated luxury sedan that blends elegant design with cutting-edge technology. Its refined interior, smooth ride, and advanced features make it a standout in its class.",
+        "engine": "2.0L TFSI 4-cylinder",
+        "horsepower": "248 hp",
+        "transmission": "7-speed S tronic dual-clutch",
+        "drivetrain": "Front-wheel drive",
+        "colors": [
+            "Mythos Black",
+            "Glacier White",
+            "Daytona Gray",
+            "Firmament Blue"
+        ],
+        "features": [
+            "MMI touch response system",
+            "Virtual Cockpit",
+            "Bang & Olufsen 3D Premium Sound",
+            "Audi pre sense",
+            "Quattro all-wheel drive"
+        ]
     },
     {
         "id": 3,
@@ -24,7 +60,25 @@
         "kilometers": "15.000 km",
         "fuel": "Hybrid",
         "price": "€55.300",
-        "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "description": "The Mercedes-Benz C-Class delivers a perfect balance of luxury, performance, and technology. Its sleek design, premium materials, and innovative features provide an exceptional driving experience.",
+        "engine": "2.0L inline-4 turbo + electric motor",
+        "horsepower": "255 hp + 20 hp (electric)",
+        "transmission": "9G-TRONIC 9-speed automatic",
+        "drivetrain": "Rear-wheel drive",
+        "colors": [
+            "Polar White",
+            "Obsidian Black",
+            "Selenite Grey",
+            "Nautical Blue"
+        ],
+        "features": [
+            "MBUX multimedia system",
+            "Burmester surround sound",
+            "Heated front seats",
+            "64-color ambient lighting",
+            "KEYLESS-GO"
+        ]
     },
     {
         "id": 4,
@@ -33,7 +87,25 @@
         "kilometers": "25.000 km",
         "fuel": "Elektrisch",
         "price": "€49.900",
-        "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
+        "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
+        "description": "The Tesla Model 3 is a revolutionary electric vehicle that combines cutting-edge technology with impressive performance and range. Its minimalist interior and autopilot capabilities set new standards in the automotive industry.",
+        "engine": "Electric motor",
+        "horsepower": "283 hp",
+        "transmission": "Single-speed fixed gear",
+        "drivetrain": "Rear-wheel drive",
+        "colors": [
+            "Pearl White",
+            "Solid Black",
+            "Midnight Silver",
+            "Deep Blue"
+        ],
+        "features": [
+            "15-inch touchscreen",
+            "Autopilot",
+            "Glass roof",
+            "Wireless charging",
+            "Premium audio system"
+        ]
     },
     {
         "id": 5,
@@ -42,7 +114,25 @@
         "kilometers": "5.000 km",
         "fuel": "Benzine",
         "price": "€195.000",
-        "image": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+        "image": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+        "description": "The Audi R8 is a high-performance supercar that delivers breathtaking acceleration and precise handling. Its distinctive design, premium craftsmanship, and thrilling V10 engine create an unforgettable driving experience.",
+        "engine": "5.2L V10",
+        "horsepower": "562 hp",
+        "transmission": "7-speed S tronic dual-clutch",
+        "drivetrain": "Quattro all-wheel drive",
+        "colors": [
+            "Vegas Yellow",
+            "Ascari Blue",
+            "Mythos Black",
+            "Daytona Gray"
+        ],
+        "features": [
+            "Virtual Cockpit",
+            "Carbon fiber interior trim",
+            "Bang & Olufsen sound system",
+            "Performance driving modes",
+            "Magnetic ride suspension"
+        ]
     },
     {
         "id": 6,
@@ -51,6 +141,51 @@
         "kilometers": "10.000 km",
         "fuel": "Diesel",
         "price": "€178.500",
-        "image": "https://images.unsplash.com/photo-1520031441872-265e4ff70366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        "image": "https://images.unsplash.com/photo-1520031441872-265e4ff70366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "description": "The Mercedes G-Wagon combines legendary off-road capability with luxury and prestige. Its iconic design, premium interior, and impressive performance make it a symbol of exclusivity and adventure.",
+        "engine": "3.0L inline-6 turbo diesel",
+        "horsepower": "286 hp",
+        "transmission": "9G-TRONIC 9-speed automatic",
+        "drivetrain": "All-wheel drive with three locking differentials",
+        "colors": [
+            "Obsidian Black",
+            "Polar White",
+            "Designo Diamond White",
+            "G Manufaktur Olive"
+        ],
+        "features": [
+            "Widescreen Cockpit",
+            "Burmester surround sound",
+            "Multicontour seats with massage",
+            "DYNAMIC SELECT",
+            "360-degree camera"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Porsche 911 Carrera S",
+        "year": "2022",
+        "kilometers": "8.500 km",
+        "fuel": "Benzine",
+        "price": "€149.900",
+        "image": "https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "description": "The Porsche 911 Carrera S represents the pinnacle of sports car engineering, delivering exceptional handling, power, and precision. Its iconic design, premium craftsmanship, and exhilarating performance create a driving experience like no other.",
+        "engine": "3.0L twin-turbo flat-six",
+        "horsepower": "443 hp",
+        "transmission": "8-speed PDK dual-clutch",
+        "drivetrain": "Rear-wheel drive",
+        "colors": [
+            "Guards Red",
+            "GT Silver",
+            "Racing Yellow",
+            "Gentian Blue"
+        ],
+        "features": [
+            "Sport Chrono Package",
+            "PASM sport suspension",
+            "Porsche Communication Management",
+            "Bose surround sound",
+            "Sport seats Plus"
+        ]
     }
 ]
