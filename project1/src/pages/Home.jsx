@@ -132,8 +132,6 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Features Section has been removed */}
-
             {/* Featured Vehicles Carousel - Added ref here */}
             <section className="page-preview inventory-preview" ref={carouselRef}>
                 <h2>Featured Vehicles</h2>
@@ -214,19 +212,21 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Contact Preview Section */}
             <section className="page-preview contact-preview">
                 <div className="contact-preview-content">
                     <div className="contact-text">
                         <h2>Personal Consultation</h2>
                         <p>Our automotive specialists are ready to assist you in finding the perfect vehicle to match your lifestyle and preferences.</p>
                         <ul className="contact-highlights">
-                            <li><i className="fas fa-check-circle"></i> Personalized vehicle recommendations</li>
-                            <li><i className="fas fa-check-circle"></i> Private showroom appointments</li>
-                            <li><i className="fas fa-check-circle"></i> Custom order assistance</li>
-                            <li><i className="fas fa-check-circle"></i> Trade-in evaluations</li>
+                            <li><i className="fas fa-check-circle"></i> <span>Personalized vehicle recommendations</span></li>
+                            <li><i className="fas fa-check-circle"></i> <span>Private showroom appointments</span></li>
+                            <li><i className="fas fa-check-circle"></i> <span>Custom order assistance</span></li>
+                            <li><i className="fas fa-check-circle"></i> <span>Trade-in evaluations</span></li>
                         </ul>
-                        <Link to="/contact" className="cta-button">Schedule a Consultation</Link>
+                        <Link to="/contact" className="cta-button consultation-button">
+                            <span>Schedule a Consultation</span>
+                            <i className="fas fa-calendar-alt"></i>
+                        </Link>
                     </div>
                     <div className="contact-image">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury car consultant" />
