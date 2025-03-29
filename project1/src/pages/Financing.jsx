@@ -352,29 +352,64 @@ const Financing = () => {
                     <h2>Frequently Asked Questions</h2>
                     
                     <div className="faq-container">
-                        <div className="faq-item">
-                            <h3>What's the difference between leasing and financing?</h3>
-                            <p>Financing means you're purchasing the vehicle and building equity with each payment, eventually owning it outright. Leasing allows you to drive a new vehicle for a specified term with typically lower monthly payments, but you return the vehicle at the end of the lease term.</p>
+                        <div className="faq-accordion">
+                            <details>
+                                <summary>
+                                    <h3>What's the difference between leasing and financing?</h3>
+                                    <i className="fas fa-chevron-down"></i>
+                                </summary>
+                                <div className="faq-content">
+                                    <p>Financing means you're purchasing the vehicle and building equity with each payment, eventually owning it outright. Leasing allows you to drive a new vehicle for a specified term with typically lower monthly payments, but you return the vehicle at the end of the lease term.</p>
+                                </div>
+                            </details>
                         </div>
                         
-                        <div className="faq-item">
-                            <h3>Do you offer financing for international clients?</h3>
-                            <p>Yes, we offer specialized financing solutions for international clients through our global banking partners. Additional documentation may be required, and our international finance team will guide you through the process.</p>
+                        <div className="faq-accordion">
+                            <details>
+                                <summary>
+                                    <h3>Do you offer financing for international clients?</h3>
+                                    <i className="fas fa-chevron-down"></i>
+                                </summary>
+                                <div className="faq-content">
+                                    <p>Yes, we offer specialized financing solutions for international clients through our global banking partners. Additional documentation may be required, and our international finance team will guide you through the process.</p>
+                                </div>
+                            </details>
                         </div>
                         
-                        <div className="faq-item">
-                            <h3>Can I refinance my current luxury vehicle with you?</h3>
-                            <p>Yes, we offer competitive refinancing options that may lower your current payment or help you access equity in your vehicle. Our financing specialists can analyze your current terms and suggest beneficial alternatives.</p>
+                        <div className="faq-accordion">
+                            <details>
+                                <summary>
+                                    <h3>Can I refinance my current luxury vehicle with you?</h3>
+                                    <i className="fas fa-chevron-down"></i>
+                                </summary>
+                                <div className="faq-content">
+                                    <p>Yes, we offer competitive refinancing options that may lower your current payment or help you access equity in your vehicle. Our financing specialists can analyze your current terms and suggest beneficial alternatives.</p>
+                                </div>
+                            </details>
                         </div>
                         
-                        <div className="faq-item">
-                            <h3>What credit score do I need to qualify for your best rates?</h3>
-                            <p>Our most competitive rates typically require a credit score of 750 or higher. However, we work with clients across the credit spectrum and have financing solutions available for various credit profiles.</p>
+                        <div className="faq-accordion">
+                            <details>
+                                <summary>
+                                    <h3>What credit score do I need to qualify for your best rates?</h3>
+                                    <i className="fas fa-chevron-down"></i>
+                                </summary>
+                                <div className="faq-content">
+                                    <p>Our most competitive rates typically require a credit score of 750 or higher. However, we work with clients across the credit spectrum and have financing solutions available for various credit profiles.</p>
+                                </div>
+                            </details>
                         </div>
                         
-                        <div className="faq-item">
-                            <h3>Can I pay off my financing early without penalties?</h3>
-                            <p>Most of our financing options allow for early payoff without prepayment penalties. However, specific terms may vary by lender. Our team will clearly disclose all terms before you sign any agreements.</p>
+                        <div className="faq-accordion">
+                            <details>
+                                <summary>
+                                    <h3>Can I pay off my financing early without penalties?</h3>
+                                    <i className="fas fa-chevron-down"></i>
+                                </summary>
+                                <div className="faq-content">
+                                    <p>Most of our financing options allow for early payoff without prepayment penalties. However, specific terms may vary by lender. Our team will clearly disclose all terms before you sign any agreements.</p>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>

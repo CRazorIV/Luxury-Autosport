@@ -4,7 +4,7 @@ import heroVideo from '../assets/heroheadervideo.mp4';
 import './Home.css';
 
 const Home = () => {
-    const featuresRef = useRef(null);
+    const carouselRef = useRef(null); // Changed from featuresRef to carouselRef
     const [isVisible, setIsVisible] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     
@@ -61,8 +61,8 @@ const Home = () => {
         };
     }, [featuredVehicles.length]);
 
-    const scrollToFeatures = () => {
-        featuresRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToCarousel = () => {
+        carouselRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const nextSlide = () => {
@@ -112,8 +112,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Enhanced Scroll Down Button */}
-                <div className="scroll-down-container" onClick={scrollToFeatures}>
+                {/* Enhanced Scroll Down Button - Updated to point to carousel */}
+                <div className="scroll-down-container" onClick={scrollToCarousel}>
                     <div className="scroll-down-button">
                         <span>Discover</span>
                         <div className="scroll-icon">
@@ -122,7 +122,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="discover-more-container" onClick={scrollToFeatures}>
+                <div className="discover-more-container" onClick={scrollToCarousel}>
                     <div className="discover-more-button">
                         <div className="double-arrow">
                             <i className="fas fa-chevron-down"></i>
@@ -132,48 +132,10 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Features Section with Arrow Links */}
-            <section className="features" ref={featuresRef}>
-                <h2>The Luxury Autos Difference</h2>
-                <div className="features-grid">
-                    <div className="feature">
-                        <div className="feature-icon">
-                            <i className="fas fa-gem"></i>
-                        </div>
-                        <h3>Curated Selection</h3>
-                        <p>Hand-selected premium vehicles from the world's finest manufacturers</p>
-                        <Link to="/inventory" className="feature-link">
-                            <span>Explore Our Collection</span>
-                            <i className="fas fa-arrow-right"></i>
-                        </Link>
-                    </div>
-                    <div className="feature">
-                        <div className="feature-icon">
-                            <i className="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Certified Authentication</h3>
-                        <p>Every vehicle undergoes a rigorous 150-point inspection process</p>
-                        <Link to="/services" className="feature-link">
-                            <span>Learn About Our Process</span>
-                            <i className="fas fa-arrow-right"></i>
-                        </Link>
-                    </div>
-                    <div className="feature">
-                        <div className="feature-icon">
-                            <i className="fas fa-concierge-bell"></i>
-                        </div>
-                        <h3>White Glove Service</h3>
-                        <p>Personalized concierge experience from test drive to delivery</p>
-                        <Link to="/services" className="feature-link">
-                            <span>Discover Our Services</span>
-                            <i className="fas fa-arrow-right"></i>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            {/* Features Section has been removed */}
 
-            {/* Featured Vehicles Carousel */}
-            <section className="page-preview inventory-preview">
+            {/* Featured Vehicles Carousel - Added ref here */}
+            <section className="page-preview inventory-preview" ref={carouselRef}>
                 <h2>Featured Vehicles</h2>
                 <p className="section-subtitle">Explore our handpicked selection of exceptional automobiles</p>
 
