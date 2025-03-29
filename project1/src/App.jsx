@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Inventory from "./pages/Inventory";
+import Financing from "./pages/Financing";
 import Services from "./pages/Services";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/financing" element={<Financing />} />
+          {/* Add more routes as needed */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
