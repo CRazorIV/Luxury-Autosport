@@ -3,6 +3,8 @@
     --scrollbar-track: #0a0a0a;
     --scrollbar-thumb: #ff0000;
     --scrollbar-thumb-hover: #cc0000;
+    --primary-font: 'Play', sans-serif;
+    --heading-font: 'Rajdhani', sans-serif;
 }
 
 /* Webkit browsers (Chrome, Safari, newer versions of Opera) */
@@ -41,7 +43,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Play', 'Rajdhani', sans-serif;
+    font-family: var(--primary-font);
     background-color: #0a0a0a;
     color: #e0e0e0;
     overflow-x: hidden;
