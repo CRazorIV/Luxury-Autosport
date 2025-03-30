@@ -38,7 +38,7 @@ const Home = () => {
             id: 5,
             name: "McLaren 720S",
             specs: "710 HP | 0-60 in 2.8s",
-            image: "https://images.unsplash.com/photo-1617808654153-9b63c69bf6f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1632245889029-e406faaa34cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         }
     ];
 
@@ -112,16 +112,6 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Enhanced Scroll Down Button - Updated to point to carousel */}
-                <div className="scroll-down-container" onClick={scrollToCarousel}>
-                    <div className="scroll-down-button">
-                        <span>Discover</span>
-                        <div className="scroll-icon">
-                            <i className="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </div>
-
                 <div className="discover-more-container" onClick={scrollToCarousel}>
                     <div className="discover-more-button">
                         <div className="double-arrow">
@@ -153,6 +143,8 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
+                        
+                        {/* Removed carousel indicators completely */}
                     </div>
 
                     <button className="carousel-control prev" onClick={prevSlide}>
@@ -161,17 +153,6 @@ const Home = () => {
                     <button className="carousel-control next" onClick={nextSlide}>
                         <i className="fas fa-chevron-right"></i>
                     </button>
-
-                    <div className="carousel-indicators">
-                        {featuredVehicles.map((_, index) => (
-                            <button 
-                                key={index} 
-                                className={`carousel-indicator ${index === currentSlide ? 'active' : ''}`}
-                                onClick={() => goToSlide(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                            />
-                        ))}
-                    </div>
                 </div>
 
                 <div className="preview-cta">

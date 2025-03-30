@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
 
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
+                ☰  
             </button>
         </nav>
     );

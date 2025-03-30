@@ -832,13 +832,12 @@
 /* Scroll Down Button - Fixed positioning */
 .scroll-down-container {
     position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 2;
-    animation: fadeInUp 1.5s ease-out 1s forwards;
-    opacity: 0;
+    bottom: 170px; /* Moved up from 120px to 170px */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+    animation: bounce 2s infinite;
 }
 
 .scroll-down-button {
@@ -1135,7 +1134,7 @@
     }
 
     .scroll-down-container {
-        bottom: 20px;
+        bottom: 210px; /* Moved up from 160px to 210px */
     }
 
     .scroll-down-button {
@@ -1240,6 +1239,10 @@
     .bottom-left,
     .bottom-right {
         bottom: 15px;
+    }
+
+    .scroll-down-container {
+        bottom: 140px; /* Moved up from 90px to 140px */
     }
 }
 
@@ -1682,7 +1685,7 @@
 /* Scroll Down Button Positioning */
 .scroll-down-container {
     position: absolute;
-    bottom: 40px;
+    bottom: 170px; /* Moved up from 120px to 170px */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1693,7 +1696,7 @@
 /* Discover More Button with Double Arrows */
 .discover-more-container {
     position: absolute;
-    bottom: 40px;
+    bottom: 120px; /* Moved up from 70px to 120px */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1769,7 +1772,7 @@
 /* Responsive styling for Discover More button */
 @media (max-width: 768px) {
     .discover-more-container {
-        bottom: 30px;
+        bottom: 150px; /* Moved up from 100px to 150px */
     }
     
     .discover-more-button {
@@ -1788,7 +1791,7 @@
 
 @media (max-width: 480px) {
     .discover-more-container {
-        bottom: 25px;
+        bottom: 90px; /* Moved up from 40px to 90px */
     }
     
     .discover-more-button {
@@ -1808,7 +1811,7 @@
 /* Update Discover More Button with Double Arrows - minimal version */
 .discover-more-container {
     position: absolute;
-    bottom: 40px;
+    bottom: 120px; /* Moved up from 70px to 120px */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1866,13 +1869,13 @@
 /* Hide discover-more-container on mobile devices */
 @media (max-width: 768px) {
     .discover-more-container {
-        display: none;
+        display: flex; /* Keep display: flex to ensure visibility */
+        bottom: 150px; /* Moved up from 100px to 150px */
     }
     
     /* Adjust position of scroll-down-container to be centered when discover-more is hidden */
     .scroll-down-container {
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 210px; /* Moved up from 160px to 210px */
     }
 }
 
@@ -2078,7 +2081,7 @@
     }
     
     .scroll-down-container {
-        bottom: 30px;
+        bottom: 140px; /* Moved up from 90px to 140px */
     }
 }
 
@@ -2124,6 +2127,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden; /* Prevent any potential overflow */
 }
 
 .carousel-image {
@@ -2151,7 +2155,7 @@
     height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Better spacing without indicators */
     border-top: 1px solid #333;
     position: relative;
 }
@@ -2248,31 +2252,37 @@
     right: 20px;
 }
 
+/* Remove carousel indicators styling */
 .carousel-indicators {
-    position: absolute;
-    bottom: 120px;
-    left: 0;
-    right: 0;
+    display: none; /* Hide completely */
+}
+
+/* Ensure proper content layout */
+.carousel-content {
+    background-color: #111111;
+    padding: 25px 30px;
+    color: white;
+    height: 32%;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    z-index: 2;
+    flex-direction: column;
+    justify-content: space-between; /* Better spacing without indicators */
+    border-top: 1px solid #333;
+    position: relative;
 }
 
-.carousel-indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0;
-}
-
-.carousel-indicator.active {
-    background-color: #ff0000;
-    transform: scale(1.2);
+/* Adjust mobile view to account for removed indicators */
+@media (max-width: 768px) {
+    .carousel-inner {
+        position: relative;
+    }
+    
+    .carousel-content {
+        padding: 20px 25px;
+    }
+    
+    .carousel-content h3 {
+        font-size: 1.6rem;
+    }
 }
 
 /* Responsive adjustments for carousel */
@@ -2310,7 +2320,17 @@
     }
     
     .carousel-indicators {
-        bottom: 100px;
+        bottom: 20px; /* Fixed position from bottom */
+        padding: 8px 0;
+    }
+    
+    .carousel-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .carousel-inner {
+        position: relative; /* Ensure proper positioning context */
     }
     
     .carousel-control {
@@ -2340,12 +2360,14 @@
     }
     
     .carousel-indicators {
-        bottom: 80px;
+        bottom: 15px;
+        padding: 6px 0;
     }
     
     .carousel-indicator {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
     }
     
     .carousel-control {
@@ -2732,12 +2754,12 @@
 
 @media (max-width: 480px) {
     .title-luxury {
-        font-size: 1.8rem;
+        font-size: 5rem;
         letter-spacing: 4px;
     }
     
     .title-autos {
-        font-size: 3rem;
+        font-size: 5rem;
         letter-spacing: 5px;
         margin-top: -8px;
     }
@@ -2768,5 +2790,79 @@
     
     .cta-button:active i {
         transform: translateX(5px);
+    }
+}
+
+/* Enhanced Mobile Hero Styling */
+@media (max-width: 768px) {
+    .home-hero {
+        height: 100vh; /* Full viewport height */
+        margin-bottom: 60px;
+        /* Keep minimum height but ensure it fills screen */
+        min-height: 100vh;
+        /* Remove any constraints that might prevent full height */
+        max-height: none;
+    }
+    
+    /* Bring back the chevrons for mobile */
+    .discover-more-container {
+        display: flex; /* Override the previous display: none */
+        bottom: 150px; /* Moved up from 100px to 150px */
+    }
+    
+    /* Adjust home-hero-content padding to create more space */
+    .home-hero-content {
+        padding-bottom: 150px; /* Increased to allow more space */
+    }
+    
+    /* Reposition scroll-down-container */
+    .scroll-down-container {
+        bottom: 210px; /* Moved up from 160px to 210px */
+    }
+}
+
+/* Extra adjustments for very small screens */
+@media (max-width: 480px) {
+    .home-hero {
+        /* Ensure full height on all mobile devices */
+        height: 100vh;
+        min-height: 100vh;
+    }
+    
+    /* Improved placement of scroll indicators */
+    .scroll-down-container {
+        bottom: 140px; /* Adjusted for smaller screens */
+    }
+    
+    .discover-more-container {
+        bottom: 90px; /* Adjusted for smaller screens */
+    }
+    
+    /* Further spacing adjustments */
+    .home-hero-content {
+        padding-bottom: 100px; /* Adjusted for smaller screens */
+    }
+}
+
+/* Fix the disappearing double chevron issue */
+.discover-more-container {
+    position: absolute;
+    bottom: 120px; /* Moved up from 70px to 120px */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Override the previous media query that hides the chevrons */
+@media (max-width: 768px) {
+    .discover-more-container {
+        display: flex; /* Keep display: flex to ensure visibility */
+        bottom: 150px; /* Moved up from 100px to 150px */
+    }
+    
+    /* Properly position both indicators */
+    .scroll-down-container {
+        bottom: 210px; /* Place above the discover-more-container */
     }
 }
