@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import '../styles/PageTransition.css';
+import './PageTransition.css';
 
 const PageTransition = ({ children }) => {
   const location = useLocation();

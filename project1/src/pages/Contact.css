@@ -80,6 +80,12 @@ html, body {
 /* Form styling */
 .contact-form {
     width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .form-section {
@@ -295,6 +301,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .form-section {
         padding: 20px;
     }
+
+    .contact-form {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -331,6 +341,47 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .submit-button {
         padding: 12px 20px;
     }
+}
+
+/* Make the form wider on desktop */
+@media (min-width: 992px) {
+  .contact-form-container {
+    max-width: 80%; /* Increase from default width */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 2rem; /* Add more space between form elements */
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .contact-form {
+    padding: 2rem 3rem; /* Add more padding inside the form */
+  }
+  
+  .form-section {
+    margin-bottom: 2.5rem; /* More space between sections */
+  }
+  
+  /* Make text fields more proportional on wider screens */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    padding: 12px 15px;
+  }
+}
+
+/* For extra-large screens, avoid the form becoming too wide */
+@media (min-width: 1400px) {
+  .contact-form-container {
+    max-width: 1200px;
+  }
 }
 
 /* Fix for full-width class */
