@@ -10,13 +10,17 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CookieConsent from "./Components/CookieConsent";
 import Loader from "./Components/Loader";
+import PageTransition from "./Components/PageTransition";
+import ScrollToTop from "./Components/ScrollToTop";
 import './App.css';
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Loader />
       <Navbar />
+      <PageTransition>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,6 +32,7 @@ const App = () => {
             <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
+      </PageTransition>
       <Footer />
       <CookieConsent />
     </>

@@ -269,7 +269,6 @@ html, body {
 .calculator-form {
     flex: 1;
     min-width: 300px;
-    max-width: 500px;
     background-color: #111;
     padding: 30px;
     border-radius: 10px;

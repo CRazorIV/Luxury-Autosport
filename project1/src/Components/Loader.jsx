@@ -12,7 +12,10 @@ const Loader = () => {
       setLoading(false);
       // Remove loading class to re-enable scrolling
       document.body.classList.remove('loading');
-    }, 1000);
+      
+      // Dispatch a custom event that other components can listen for
+      window.dispatchEvent(new CustomEvent('contentLoaded'));
+    }, 1500);
 
     return () => {
       clearTimeout(timer);
