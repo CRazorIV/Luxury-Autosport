@@ -65,21 +65,12 @@ const Inventory = () => {
     // Function to lock/unlock body scroll
     const toggleBodyScroll = (lock) => {
         if (lock) {
-            // Save the current scroll position
-            const scrollY = window.scrollY;
-            // Add styles to lock scrolling
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.width = '100%';
-            document.body.dataset.scrollPosition = scrollY;
+            // Just add the class and prevent scrolling
+            // No need to manipulate the scroll position directly
+            document.body.classList.add('fixed');
         } else {
-            // Restore the scroll position
-            const scrollY = document.body.dataset.scrollPosition || '0';
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.width = '';
-            window.scrollTo(0, parseInt(scrollY || '0'));
-            delete document.body.dataset.scrollPosition;
+            // Just remove the class to re-enable scrolling
+            document.body.classList.remove('fixed');
         }
     };
     
@@ -206,8 +197,9 @@ const Inventory = () => {
     
     // Close overlay when clicking outside
     const closeOverlay = (e) => {
-        if (e.target.classList.contains('car-details-overlay')) {
-            setSelectedCar(null);
+        // Check if the click was directly on the overlay (not its children)
+        if (e.target === e.currentTarget) {
+            closeCarDetails();
         }
     };
 
@@ -266,6 +258,19 @@ const Inventory = () => {
     // Check if device is mobile/tablet
     const isMobileOrTablet = () => {
         return window.innerWidth <= 991;
+    };
+
+    // Update the More Info button handler
+    const openCarDetails = (car) => {
+        toggleBodyScroll(true);
+        setSelectedCar(car);
+        setActiveTab('details');
+    };
+
+    // Update the close button handler
+    const closeCarDetails = () => {
+        toggleBodyScroll(false);
+        setSelectedCar(null);
     };
 
     return (
@@ -421,7 +426,7 @@ const Inventory = () => {
                                 <h2>{car.name}</h2>
                                 <p>{car.year} | {car.kilometers} | {car.fuel}</p>
                                 <p className="car-price">{car.price}</p>
-                                <button onClick={() => setSelectedCar(car)}>More Info</button>
+                                <button onClick={() => openCarDetails(car)}>More Info</button>
                             </div>
                         </div>
                     ))
@@ -432,7 +437,7 @@ const Inventory = () => {
             {selectedCar && (
                 <div className="car-details-overlay" onClick={closeOverlay}>
                     <div className="car-details-modal">
-                        <button className="close-button" onClick={() => setSelectedCar(null)}>
+                        <button className="close-button" onClick={closeCarDetails}>
                             <i className="fas fa-times"></i>
                         </button>
                         
