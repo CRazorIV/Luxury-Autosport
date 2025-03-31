@@ -2866,3 +2866,154 @@
         bottom: 210px; /* Place above the discover-more-container */
     }
 }
+
+/* About Us Section - Modified to account for removed CTA */
+.about-us-section {
+    max-width: 1400px;
+    margin: 0 auto 100px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.about-content {
+    background-color: #111111;
+    padding: 60px 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #222;
+    position: relative;
+}
+
+.about-us-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-separator {
+    width: 80px;
+    height: 3px;
+    background-color: #ff0000;
+    margin: 0 auto 30px;
+}
+
+.about-intro {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.about-columns {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px; /* Reduced from 40px since we removed the CTA */
+}
+
+.about-column {
+    flex: 1;
+    text-align: left;
+}
+
+.about-column p {
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Responsive styles for About Us section */
+@media (max-width: 992px) {
+    .about-us-section {
+        margin-bottom: 80px;
+    }
+    
+    .about-content {
+        padding: 50px 30px;
+    }
+    
+    .about-us-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .about-intro {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-section {
+        margin-bottom: 60px;
+        padding: 0 20px;
+    }
+    
+    .about-content {
+        padding: 40px 25px;
+    }
+    
+    .about-us-section h2 {
+        font-size: 2rem;
+    }
+    
+    .about-intro {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .about-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-column {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-section {
+        margin-bottom: 50px;
+        padding: 0 15px;
+    }
+    
+    .about-content {
+        padding: 30px 20px;
+    }
+    
+    .about-us-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-intro {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-column p {
+        font-size: 0.95rem;
+    }
+    
+    .about-link {
+        font-size: 1rem;
+    }
+}
+
+/* Keep other existing styles */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Play', 'Rajdhani', sans-serif;
+}
+
+/* For very large screens, ensure video covers the entire width */
+@media (min-width: 2000px) {
+    .home-hero .video-background video {
+        width: 100%;
+        height: auto;
+    }
+}

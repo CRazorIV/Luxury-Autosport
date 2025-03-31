@@ -4,7 +4,8 @@ import heroVideo from '../assets/heroheadervideo.mp4';
 import './Home.css';
 
 const Home = () => {
-    const carouselRef = useRef(null); // Changed from featuresRef to carouselRef
+    const aboutSectionRef = useRef(null);
+    const carouselRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     
@@ -61,8 +62,9 @@ const Home = () => {
         };
     }, [featuredVehicles.length]);
 
-    const scrollToCarousel = () => {
-        carouselRef.current.scrollIntoView({ behavior: 'smooth' });
+    // Modified to scroll to About section instead of carousel
+    const scrollToAboutSection = () => {
+        aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const nextSlide = () => {
@@ -112,7 +114,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="discover-more-container" onClick={scrollToCarousel}>
+                {/* Updated to scroll to About section */}
+                <div className="discover-more-container" onClick={scrollToAboutSection}>
                     <div className="discover-more-button">
                         <div className="double-arrow">
                             <i className="fas fa-chevron-down"></i>
@@ -122,7 +125,35 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Featured Vehicles Carousel - Added ref here */}
+            {/* Added ref to About Us Section */}
+            <section className="about-us-section" ref={aboutSectionRef}>
+                <div className="about-content">
+                    <h2>Exceptional Vehicles for Discerning Clients</h2>
+                    <div className="about-separator"></div>
+                    <p className="about-intro">
+                        For over two decades, Luxury Autos has redefined the art of automotive excellence, 
+                        curating the world's most prestigious vehicles for clients who demand perfection.
+                    </p>
+                    <div className="about-columns">
+                        <div className="about-column">
+                            <p>
+                                Our exclusive showroom features a handpicked collection of the finest automobiles, 
+                                from legendary marques like Ferrari, Lamborghini, and Porsche to ultra-rare limited editions 
+                                that represent the pinnacle of automotive engineering.
+                            </p>
+                        </div>
+                        <div className="about-column">
+                            <p>
+                                We believe luxury is personal. Our team of dedicated specialists provides a bespoke 
+                                experience tailored to your unique preferences, whether you're seeking performance, 
+                                elegance, or the thrill of collecting automotive art.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Featured Vehicles Carousel */}
             <section className="page-preview inventory-preview" ref={carouselRef}>
                 <h2>Featured Vehicles</h2>
                 <p className="section-subtitle">Explore our handpicked selection of exceptional automobiles</p>
@@ -143,8 +174,6 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
-                        
-                        {/* Removed carousel indicators completely */}
                     </div>
 
                     <button className="carousel-control prev" onClick={prevSlide}>
