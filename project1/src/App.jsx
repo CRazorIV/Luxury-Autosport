@@ -9,24 +9,27 @@ import TermsOfService from "./pages/TermsOfService";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CookieConsent from "./Components/CookieConsent";
+import PageTransition from "./Components/PageTransition";
 import './App.css';
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/inventory" element={<Inventory />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/financing" element={<Financing />} />
-          {/* Add more routes as needed */}
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-        </Routes>
-      </main>
+      <PageTransition>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/inventory" element={<Inventory />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/financing" element={<Financing />} />
+            {/* Add more routes as needed */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+          </Routes>
+        </main>
+      </PageTransition>
       <Footer />
       <CookieConsent />
     </>
