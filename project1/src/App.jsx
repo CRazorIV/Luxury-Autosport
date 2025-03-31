@@ -9,14 +9,14 @@ import TermsOfService from "./pages/TermsOfService";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CookieConsent from "./Components/CookieConsent";
-import PageTransition from "./Components/PageTransition";
+import Loader from "./Components/Loader";
 import './App.css';
 
 const App = () => {
   return (
     <>
+      <Loader />
       <Navbar />
-      <PageTransition>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,7 +28,6 @@ const App = () => {
             <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
-      </PageTransition>
       <Footer />
       <CookieConsent />
     </>
