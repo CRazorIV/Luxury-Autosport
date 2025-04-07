@@ -4,7 +4,7 @@
 
 ## Overview
 
-Luxury Autosport is a fictional high-end car dealership website built with modern web technologies. This school project showcases a sleek and interactive interface for browsing luxury vehicles.
+Luxury Autosport is a fictional high-end car dealership website built with modern web technologies. This personal project showcases a sleek and interactive interface for browsing luxury vehicles.
 
 ---
 
